@@ -1,6 +1,7 @@
 ---
 title: Super Serial - PicoCTF Writeup
 category: writeups
+by: Lorenzo Stella
 ---
 
 # Super Serial
