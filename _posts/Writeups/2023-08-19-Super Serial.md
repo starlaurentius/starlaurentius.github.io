@@ -11,7 +11,7 @@ category: writeups
 
 ---
 
-![Untitled](/assets/lib/Super Serial/Untitled.png)
+![Untitled](/assets/Super Serial/Untitled.png)
 
 ## Approach
 
@@ -19,21 +19,21 @@ category: writeups
 
 Upon visiting the link we are prompted with a sign in page
 
-![Untitled](/assets/lib/Super Serial/Untitled%201.png)
+![Untitled](/assets/Super Serial/Untitled%201.png)
 
 By inspecting the source we don’t find anything interesting, so lets try to look up the robots.txt file
 
-![Untitled](/assets/lib/Super Serial/Untitled%202.png)
+![Untitled](/assets/Super Serial/Untitled%202.png)
 
 we find that /admin.phps is not allowed to be indexed, so let’s try to access it
 
-![Untitled](/assets/lib/Super Serial/Untitled%203.png)
+![Untitled](/assets/Super Serial/Untitled%203.png)
 
 The file is not on the server, so let’s try to access the /index.phps file instead
 
 By inspecting the page source we find this bit of code:
 
-![Untitled](/assets/lib/Super Serial/Untitled%204.png)
+![Untitled](/assets/Super Serial/Untitled%204.png)
 
 we notice that a new ***********permissions*********** object is created with the values fetched from the sign in form input fields, this object is then serialized, base_64 encoded and url encoded and then set a cookie by the name of “login”
 
@@ -204,7 +204,7 @@ The error will be caught and the contents of the log_file will be printed
 
 Now we refer back to the hint:
 
-![Untitled](/assets/lib/Super Serial/Untitled%205.png)
+![Untitled](/assets/Super Serial/Untitled%205.png)
 
 if the flag is at ../flag then we just need to create an access_log object with the log_file field containing the path to ../flag
 
@@ -245,10 +245,10 @@ TzoxMDoiYWNjZXNzX2xvZyI6MTp7czo4OiJsb2dfZmlsZSI7czo3OiIuLi9mbGFnIjt9
 
 Now we create a cookie “login” with our object as value on the /authentication.php page
 
-![Untitled](/assets/lib/Super Serial/Untitled%206.png)
+![Untitled](/assets/Super Serial/Untitled%206.png)
 
-![Untitled](/assets/lib/Super Serial/Untitled%207.png)
+![Untitled](/assets/Super Serial/Untitled%207.png)
 
 Refreshing the page gives us the flag.
 
-![Untitled](/assets/lib/Super Serial/Untitled%208.png)
+![Untitled](/assets/Super Serial/Untitled%208.png)
