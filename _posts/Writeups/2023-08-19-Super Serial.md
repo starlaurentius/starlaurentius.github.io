@@ -36,13 +36,14 @@ By inspecting the page source we find this bit of code:
 
 ![Untitled](/assets/Super Serial/Untitled%204.png)
 
-we notice that a new ***********permissions*********** object is created with the values fetched from the sign in form input fields, this object is then serialized, base_64 encoded and url encoded and then set a cookie by the name of “login”
+we notice that a new ***permissions*** object is created with the values fetched from the sign in form input fields. This object is then serialized, base_64 encoded and url encoded and then set as a cookie by the name of “login”
 
 we also notice a reference to the files “cookie.php” in line 2 and “authentication.php” in line 11
 
 let’s request the source code for both by looking up the “cookie.phps” and “authentication.phps” files and inspecting them
 
 ```php
+#authentication.phps
 <?php
 
 class access_log
@@ -120,9 +121,10 @@ function read_log() {
 
 let’s move on to “cookie.phps”
 
-here the ***********permissions*********** class is defined
+here the ***permissions*** class is defined
 
 ```php
+#cookie.phps
 <?php
 session_start();
 
