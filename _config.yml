@@ -20,10 +20,10 @@ timezone: Europe/Rome
 
 title: Lorenzo Stella # the main title
 
-tagline: Welcome to my blog! # it will display as the sub-title
+tagline: Here's a collection of writeups for some of the ctf challenges I played # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Welcome to my blog!
+  Here's a collection of writeups for some of the ctf challenges I played
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://starlaurentius.github.io"
